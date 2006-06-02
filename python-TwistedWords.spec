@@ -1,19 +1,21 @@
 %define 	module	TwistedWords
+%define		major	0.4
+%define		minor	0
 
 Summary:	Chat and Instant Messaging for Twisted
 Summary(pl):	Chat oraz Instant Messaging dla Twisted
 Name:		python-%{module}
-Version:	0.1.0
-Release:	0.2
+Version:	%{major}.%{minor}
+Release:	0.1
 License:	MIT
 Group:		Libraries/Python
-Source0:	http://tmrc.mit.edu/mirror/twisted/Words/0.1/%{module}-%{version}.tar.bz2
-# Source0-md5:	168ca07ab860324054c539bec1b0ef57
+Source0:	http://tmrc.mit.edu/mirror/twisted/Words/%{major}/%{module}-%{version}.tar.bz2
+# Source0-md5:	37d34da233aefe4a7a41b97bc9222b6a
 URL:		http://twistedmatrix.com/projects/words/
 BuildRequires:	ZopeInterface
 BuildRequires:	python-devel >= 2.2
-Requires:	python-Twisted >= 2.0
-Requires:	python-TwistedXish
+Requires:	python-TwistedCore >= 2.4.0
+Obsoletes:	python-TwistedXish
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
