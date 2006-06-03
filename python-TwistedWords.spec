@@ -15,6 +15,7 @@ URL:		http://twistedmatrix.com/projects/words/
 BuildRequires:	ZopeInterface
 BuildRequires:	python-devel >= 2.2
 Requires:	python-TwistedCore >= 2.4.0
+Obsoletes:	python-Twisted-words
 Obsoletes:	python-TwistedXish
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
