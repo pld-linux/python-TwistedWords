@@ -81,7 +81,7 @@ find $RPM_BUILD_ROOT%{py_sitescriptdir} -name \*.py -exec rm {} \;
 ln -sf %{py_sitescriptdir}/twisted/words $RPM_BUILD_ROOT%{py_sitedir}/twisted/words
 
 install doc/man/*.1 $RPM_BUILD_ROOT%{_mandir}/man1
-cp -ar doc/examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
+cp -a doc/examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
