@@ -3,7 +3,7 @@
 %define		minor	0
 
 Summary:	Chat and Instant Messaging for Twisted
-Summary(pl):	Chat oraz Instant Messaging dla Twisted
+Summary(pl.UTF-8):   Chat oraz Instant Messaging dla Twisted
 Name:		python-%{module}
 Version:	%{major}.%{minor}
 Release:	0.1
@@ -27,16 +27,16 @@ Twisted Words includes:
 - Prototypes of chat server and client frameworks built on top of the
   protocols.
 
-%description -l pl
+%description -l pl.UTF-8
 Twisted Words zawiera:
-- Niskopoziomowe implementacje protoko≥Ûw OSCAR (AIM oraz ICQ), IRC,
+- Niskopoziomowe implementacje protoko≈Ç√≥w OSCAR (AIM oraz ICQ), IRC,
   MSN, TOC (AIM),
 - Biblioteki Jabberowe,
 - Prototypy serwera chatowego
 
 %package doc
 Summary:	Documentation for Twisted
-Summary(pl):	Dokumentacja do Twisted
+Summary(pl.UTF-8):   Dokumentacja do Twisted
 Group:		Libraries/Python
 Requires:	%{name} = %{version}-%{release}
 
@@ -44,21 +44,21 @@ Requires:	%{name} = %{version}-%{release}
 Offline documentation for Twisted - event-driven networking framework
 written in Python.
 
-%description doc -l pl
-Dokumentacja offline do Twisted - narzÍdzia do budowania rozproszonych
+%description doc -l pl.UTF-8
+Dokumentacja offline do Twisted - narzƒôdzia do budowania rozproszonych
 aplikacji sieciowych pisanych w Pythonie.
 
 %package examples
 Summary:	Example programs for Twisted
-Summary(pl):	Programy przyk≥adowe do Twisted
+Summary(pl.UTF-8):   Programy przyk≈Çadowe do Twisted
 Group:		Libraries/Python
 Requires:	%{name} = %{version}-%{release}
 
 %description examples
 This package contains example programs for Twisted.
 
-%description examples -l pl
-Ten pakiet zawiera przyk≥adowe programy dla Twisted.
+%description examples -l pl.UTF-8
+Ten pakiet zawiera przyk≈Çadowe programy dla Twisted.
 
 %prep
 %setup -q -n %{module}-%{version}
