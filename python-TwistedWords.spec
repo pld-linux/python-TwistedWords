@@ -3,7 +3,7 @@
 %define		minor	0
 
 Summary:	Chat and Instant Messaging for Twisted
-Summary(pl.UTF-8):   Chat oraz Instant Messaging dla Twisted
+Summary(pl.UTF-8):	Chat oraz Instant Messaging dla Twisted
 Name:		python-%{module}
 Version:	%{major}.%{minor}
 Release:	0.1
@@ -36,7 +36,7 @@ Twisted Words zawiera:
 
 %package doc
 Summary:	Documentation for Twisted
-Summary(pl.UTF-8):   Dokumentacja do Twisted
+Summary(pl.UTF-8):	Dokumentacja do Twisted
 Group:		Libraries/Python
 Requires:	%{name} = %{version}-%{release}
 
@@ -50,7 +50,7 @@ aplikacji sieciowych pisanych w Pythonie.
 
 %package examples
 Summary:	Example programs for Twisted
-Summary(pl.UTF-8):   Programy przykładowe do Twisted
+Summary(pl.UTF-8):	Programy przykładowe do Twisted
 Group:		Libraries/Python
 Requires:	%{name} = %{version}-%{release}
 
