@@ -1,5 +1,5 @@
 %define 	module	TwistedWords
-%define		major	0.4
+%define		major	8.0
 %define		minor	0
 
 Summary:	Chat and Instant Messaging for Twisted
@@ -10,7 +10,7 @@ Release:	0.1
 License:	MIT
 Group:		Libraries/Python
 Source0:	http://tmrc.mit.edu/mirror/twisted/Words/%{major}/%{module}-%{version}.tar.bz2
-# Source0-md5:	37d34da233aefe4a7a41b97bc9222b6a
+# Source0-md5:	8c142fc30bcadf41b1ff68b5f4101418
 URL:		http://twistedmatrix.com/projects/words/
 BuildRequires:	ZopeInterface
 BuildRequires:	python-devel >= 2.2
@@ -91,6 +91,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc LICENSE NEWS README
 %attr(755,root,root) %{_bindir}/*
 %{py_sitedir}/twisted/words
+%{py_sitescriptdir}/*.egg-info
 %{py_sitescriptdir}/twisted
 %{_mandir}/man1/*.1*
 
