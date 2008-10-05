@@ -1,17 +1,17 @@
 %define 	module	TwistedWords
-%define		major	8.0
+%define		major	8.1
 %define		minor	0
 
 Summary:	Chat and Instant Messaging for Twisted
 Summary(pl.UTF-8):	Chat oraz Instant Messaging dla Twisted
 Name:		python-%{module}
 Version:	%{major}.%{minor}
-Release:	0.1
+Release:	1
 License:	MIT
 Group:		Libraries/Python
 Source0:	http://tmrc.mit.edu/mirror/twisted/Words/%{major}/%{module}-%{version}.tar.bz2
-# Source0-md5:	8c142fc30bcadf41b1ff68b5f4101418
-URL:		http://twistedmatrix.com/projects/words/
+# Source0-md5:	40cecdc6d58efefdb02b50961bb9a381
+URL:		http://twistedmatrix.com/trac/wiki/TwistedWords
 BuildRequires:	ZopeInterface
 BuildRequires:	python-devel >= 2.2
 Requires:	python-TwistedCore >= 2.4.0
@@ -73,12 +73,11 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{py_sitedir}/twisted,%{py_sitescriptdir},%{_mandir}/man1,%{_examplesdir}/%{name}-%{version}}
 
 python setup.py install \
+	--install-purelib=%{py_sitedir} \
 	--root=$RPM_BUILD_ROOT \
 	--optimize=2
 
-find $RPM_BUILD_ROOT%{py_sitescriptdir} -name \*.py -exec rm {} \;
-
-ln -sf %{py_sitescriptdir}/twisted/words $RPM_BUILD_ROOT%{py_sitedir}/twisted/words
+%py_postclean
 
 install doc/man/*.1 $RPM_BUILD_ROOT%{_mandir}/man1
 cp -a doc/examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
@@ -90,9 +89,9 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc LICENSE NEWS README
 %attr(755,root,root) %{_bindir}/*
+%{py_sitedir}/*.egg-info
 %{py_sitedir}/twisted/words
-%{py_sitescriptdir}/*.egg-info
-%{py_sitescriptdir}/twisted
+%{py_sitedir}/twisted/plugins/*
 %{_mandir}/man1/*.1*
 
 %files doc
