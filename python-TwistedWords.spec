@@ -13,7 +13,10 @@ Source0:	http://tmrc.mit.edu/mirror/twisted/Words/%{major}/%{module}-%{version}.
 # Source0-md5:	40cecdc6d58efefdb02b50961bb9a381
 URL:		http://twistedmatrix.com/trac/wiki/TwistedWords
 BuildRequires:	ZopeInterface
-BuildRequires:	python-devel >= 2.2
+BuildRequires:	python-devel >= 1:2.5
+BuildRequires:	rpm-pythonprov
+BuildRequires:	rpmbuild(macros) >= 1.219
+%pyrequires_eq	python-libs
 Requires:	python-TwistedCore >= 2.4.0
 Obsoletes:	python-Twisted-words
 Obsoletes:	python-TwistedXish
@@ -66,13 +69,13 @@ Ten pakiet zawiera przykładowe programy dla Twisted.
 %build
 CFLAGS="%{rpmcflags}"
 export CFLAGS
-python setup.py build_ext
+%{__python} setup.py build_ext
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{py_sitedir}/twisted,%{py_sitescriptdir},%{_mandir}/man1,%{_examplesdir}/%{name}-%{version}}
 
-python setup.py install \
+%{__python} setup.py install \
 	--install-purelib=%{py_sitedir} \
 	--root=$RPM_BUILD_ROOT \
 	--optimize=2
