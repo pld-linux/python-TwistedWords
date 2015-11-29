@@ -15,7 +15,7 @@ URL:		http://twistedmatrix.com/trac/wiki/TwistedWords
 BuildRequires:	ZopeInterface
 BuildRequires:	python-devel >= 1:2.5
 BuildRequires:	rpm-pythonprov
-BuildRequires:	rpmbuild(macros) >= 1.219
+BuildRequires:	rpmbuild(macros) >= 1.710
 %pyrequires_eq	python-libs
 Requires:	python-TwistedCore >= 2.4.0
 Obsoletes:	python-Twisted-words
