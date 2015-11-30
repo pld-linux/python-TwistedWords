@@ -6,7 +6,7 @@ Summary:	Chat and Instant Messaging for Twisted
 Summary(pl.UTF-8):	Chat oraz Instant Messaging dla Twisted
 Name:		python-%{module}
 Version:	%{major}.%{minor}
-Release:	4
+Release:	5
 License:	MIT
 Group:		Libraries/Python
 Source0:	http://tmrc.mit.edu/mirror/twisted/Words/%{major}/%{module}-%{version}.tar.bz2
